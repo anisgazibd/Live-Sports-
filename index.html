@@ -26,8 +26,55 @@
         .watermark { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: rgba(255, 255, 255, 0.85); font-family: 'Playfair Display', serif; font-size: 12px; font-style: italic; z-index: 100; pointer-events: none; }
 
         .btn-player { background: #ff8c00; color: white; border: none; padding: 12px; font-size: 18px; border-radius: 5px; cursor: pointer; margin: 15px 0; width: 100%; font-weight: bold; text-transform: uppercase; }
-        .ad-box { margin-top: 10px; border: 1px solid #ddd; padding: 5px; min-height: 50px; }
-        .ad-box img { width: 100%; height: auto; display: block; }
+        
+        /* --- নতুন উন্নত অ্যাড বক্স স্টাইল --- */
+        .my-own-ad { 
+            display: block; 
+            margin: 20px 0; 
+            border: 1px solid #ddd; 
+            padding: 10px; 
+            border-radius: 8px; 
+            background: #fafafa;
+            text-decoration: none;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .my-own-ad img { 
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+        
+        /* হোয়াটসঅ্যাপ বাটন স্টাইল */
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #25D366;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 12px 25px;
+            border-radius: 30px;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            animation: pulse 2s infinite;
+        }
+        .whatsapp-btn:hover {
+            background-color: #1ebd58;
+            transform: scale(1.02);
+        }
+
+        /* বাটনের আকর্ষণ বাড়ানোর জন্য পালস অ্যানিমেশন */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
 
         .counter-box { border: 1px solid #999; padding: 10px; width: 200px; margin: 20px auto; font-size: 13px; background: #fff; text-align: center; }
         .counter-line { border-bottom: 1px solid #eee; padding: 4px 0; }
@@ -54,14 +101,16 @@
 
         <button class="btn-player">Player 2 / Visit Link</button>
 
-        <a href="https://wa.me/+8801531151169" class="my-own-ad">
-            <img src="https://res.cloudinary.com/dlklqihg6/image/upload/v1779876392/uctp205duwn37jjuvfuy.jpg" alt="Your Product">
-            
-            <span> here to Order on WhatsApp</span>
+        <!-- অ্যাড বক্স সেকশন -->
+        <a href="https://wa.me/+8801531151169" class="my-own-ad" target="_blank">
+            <img src="https://res.cloudinary.com/dlklqihg6/image/upload/v1779876392/uctp205duwn37jjuvfuy.jpg" alt="Product Banner">
+            <div class="whatsapp-btn">
+                💬 Order on WhatsApp
+            </div>
         </a>
 
         <div class="counter-box">
-            <div class="counter-line">Now Online: <span class="counter-num"></span></div>
+            <div class="counter-line">Now Online: <span class="counter-num">15</span></div>
             <div class="counter-line">Total Visitors:<br><span class="counter-num">1035</span></div>
         </div>
     </div>
